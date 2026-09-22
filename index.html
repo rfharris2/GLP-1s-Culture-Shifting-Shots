@@ -32,14 +32,22 @@
     }
 
     .featured {
-      display: flex;
-      gap: 30px;
-      align-items: flex-start;
-      margin-bottom: 40px;
-    }
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
 
     .featured img {
-      width: 30%;
+      width: 35%;
       border: 1px solid #ccc;
       box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
     }
