@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<div class="gallery">
+
+  <div class="entry">
+    ...
+  </div>
+
+  <div class="entry">
+    ...
+  </div>
+
+  <!-- all your other entries go here -->
+
+</div>
+  <head>
   <meta charset="UTF-8">
   <title>GLP-1s - Culture Shifting Shots</title>
   <style>
@@ -72,7 +85,7 @@
 }
 
 .entry img {
-  width: 60%;
+  width: 100%;
   display: block;
   margin: 0 auto;
   border: 1px solid #ccc;
@@ -95,6 +108,11 @@
       margin-right: 0;
       transform: rotate(1.5deg);
     }
+ .gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}  
   </style>
 </head>
 <body>
