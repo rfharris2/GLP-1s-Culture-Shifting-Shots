@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<div class="gallery">
-
-  <div class="entry">
-    ...
-  </div>
-
-  <div class="entry">
-    ...
-  </div>
-
-  <!-- all your other entries go here -->
-
-</div>
-  <head>
+<head>
   <meta charset="UTF-8">
   <title>GLP-1s - Culture Shifting Shots</title>
   <style>
@@ -45,19 +32,19 @@
     }
 
     .featured {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  margin-bottom: 40px;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 0 60px;
-  box-sizing: border-box;
-}
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      padding: 0 60px;
+      box-sizing: border-box;
+    }
 
     .featured img {
       width: 20%;
@@ -74,45 +61,46 @@
     }
 
     .featured-text p {
-  color: #444;
-  line-height: 1.6;
-  text-align: justify;
-  font-size: 19px;
-}
+      color: #444;
+      line-height: 1.6;
+      text-align: justify;
+      font-size: 19px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
 
     .entry {
-  margin-bottom: 30px;
-}
+      margin-bottom: 30px;
+    }
 
-.entry img {
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
-}
+    .entry img {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+    }
 
-.note {
-  background-color: #fff6b7;
-  padding: 10px 15px;
-  max-width: 280px;
-  font-size: 14px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-  font-family: 'Comic Sans MS', 'Marker Felt', sans-serif;
-  margin: 5px auto;
-  transform: rotate(-1.5deg);
-}
+    .note {
+      background-color: #fff6b7;
+      padding: 10px 15px;
+      max-width: 280px;
+      font-size: 14px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      font-family: 'Comic Sans MS', 'Marker Felt', sans-serif;
+      margin: 5px auto;
+      transform: rotate(-1.5deg);
+    }
 
     .note.right {
       margin-left: auto;
       margin-right: 0;
       transform: rotate(1.5deg);
     }
- .gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}  
   </style>
 </head>
 <body>
@@ -129,50 +117,55 @@
     </div>
   </div>
 
-
   <!-- ===== END ENTRY TEMPLATE ===== -->
 
-  <div class="entry">
-    <div class="note">
-      This capture shows the cost of obesity itself. I was astounded by the percentage of US Adults living with obesity (40%) and the cost associated with this medical condition ($445 billion).
-    </div>
-    <img src="GLP1Screenshot1.png" alt="Obesity Statistics in America 2026 report">
-  </div>
+  <div class="gallery">
 
-  <div class="entry">
-    <div class="note">
-      This capture, in my opinion, shows evidence of how the use of GLP-1s is leading to a paradigm shift. It may be too early to consider this a shift given that we only have a decline over a 4-year period.
+    <div class="entry">
+      <div class="note">
+        This capture shows the cost of obesity itself. I was astounded by the percentage of US Adults living with obesity (40%) and the cost associated with this medical condition ($445 billion).
+      </div>
+      <img src="GLP1Screenshot1.png" alt="Obesity Statistics in America 2026 report">
     </div>
-    <img src="ScreenshotGLP2.png" alt="Chart showing US adult obesity rate trend 2015-2026">
-  </div>
 
-  <div class="entry">
-    <div class="note">
-      An annual savings of $580 million on jet fuel!!! What?!?!?! This is an anecdotal capture but one I found to be quite interesting especially the comment regarding the push to evaluate our food environment.
+    <div class="entry">
+      <div class="note">
+        This capture, in my opinion, shows evidence of how the use of GLP-1s is leading to a paradigm shift. It may be too early to consider this a shift given that we only have a decline over a 4-year period.
+      </div>
+      <img src="ScreenshotGLP2.png" alt="Chart showing US adult obesity rate trend 2015-2026">
     </div>
-    <img src="ScreenshotGLP4.png" alt="Reddit discussion on long-term societal effects of GLP-1 adoption">
-  </div>
 
-  <div class="entry">
-    <div class="note">
-      This Instagram post from Aspen Ideas Health captures a quote from Ali Furman, a Partner and U.S. Consumer Markets Industry Leader at PwC, comparing the disruption of GLP-1s to that of the smartphone. She argues new brands, products, and entire industries are forming around this drug, reinforcing the idea that this is as much an economic and cultural shift as a health one.
+    <div class="entry">
+      <div class="note">
+        An annual savings of $580 million on jet fuel!!! What?!?!?! This is an anecdotal capture but one I found to be quite interesting especially the comment regarding the push to evaluate our food environment.
+      </div>
+      <img src="ScreenshotGLP4.png" alt="Reddit discussion on long-term societal effects of GLP-1 adoption">
     </div>
-    <img src="ScreenshotGLP5.png" alt="Instagram post from Aspen Ideas Health quoting Ali Furman on GLP-1s as a technological-style disruption">
+
+    <div class="entry">
+      <div class="note">
+        This Instagram post from Aspen Ideas Health captures a quote from Ali Furman, a Partner and U.S. Consumer Markets Industry Leader at PwC, comparing the disruption of GLP-1s to that of the smartphone. She argues new brands, products, and entire industries are forming around this drug, reinforcing the idea that this is as much an economic and cultural shift as a health one.
+      </div>
+      <img src="ScreenshotGLP5.png" alt="Instagram post from Aspen Ideas Health quoting Ali Furman on GLP-1s as a technological-style disruption">
+    </div>
+
+    <div class="entry">
+      <div class="note">
+        This WSJ podcast episode, "How Big Food Is Navigating the GLP-1 Era," highlights how food companies are being forced to rethink their entire strategy. For decades, the industry leaned into sugar, salt, and flavor to drive sales — but with GLP-1s and health-conscious shopping on the rise, that playbook is being challenged. It's a good example of how this isn't just a personal health story, but one that's reshaping entire industries from the top down.
+      </div>
+      <img src="ScreenshotGLP6.png" alt="WSJ podcast The Journal episode: How Big Food Is Navigating the GLP-1 Era">
+    </div>
+
+    <div class="entry">
+      <div class="note">
+        This Instagram post cites McKinsey data showing just how quickly grocery spending shifts once someone starts a GLP-1: within 6 months, purchases of chips, sweet bakery items, cookies, and soft drinks all dropped by 7-11%, while yogurt and fresh produce rose. What stands out to me is how granular this data is — it's not just "people eat less," it's a full-scale reordering of the grocery cart. This feels like strong evidence that GLP-1s are reshaping the food industry from the consumer side, not just the pharmaceutical side.
+      </div>
+      <img src="ScreenshotGLP7.png" alt="Instagram post citing McKinsey data on grocery spending changes 6 months after GLP-1 adoption">
+    </div>
+
   </div>
 
 </body>
 </html>
-</body>
-</html>
-<div class="entry">
-  <div class="note">
-    This WSJ podcast episode, "How Big Food Is Navigating the GLP-1 Era," highlights how food companies are being forced to rethink their entire strategy. For decades, the industry leaned into sugar, salt, and flavor to drive sales — but with GLP-1s and health-conscious shopping on the rise, that playbook is being challenged. It's a good example of how this isn't just a personal health story, but one that's reshaping entire industries from the top down.
-  </div>
-  <img src="ScreenshotGLP6.png" alt="WSJ podcast The Journal episode: How Big Food Is Navigating the GLP-1 Era">
-</div>
-<div class="entry">
-  <div class="note">
-    This Instagram post cites McKinsey data showing just how quickly grocery spending shifts once someone starts a GLP-1: within 6 months, purchases of chips, sweet bakery items, cookies, and soft drinks all dropped by 7-11%, while yogurt and fresh produce rose. What stands out to me is how granular this data is — it's not just "people eat less," it's a full-scale reordering of the grocery cart. This feels like strong evidence that GLP-1s are reshaping the food industry from the consumer side, not just the pharmaceutical side.
-  </div>
   <img src="ScreenshotGLP7.png" alt="Instagram post citing McKinsey data on grocery spending changes 6 months after GLP-1 adoption">
 </div>
