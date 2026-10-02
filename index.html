@@ -35,7 +35,7 @@
       display: flex;
       gap: 40px;
       align-items: flex-start;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
       width: 100vw;
       position: relative;
       left: 50%;
@@ -59,46 +59,7 @@
     .featured-text h2 {
       margin-top: 0;
     }
-.featured {
-  margin-bottom: 10px;
-}
 
-.rule-section {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  margin-bottom: 40px;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 0 60px;
-  box-sizing: border-box;
-}
-
-.rule-section-spacer {
-  width: 20%;
-  flex-shrink: 0;
-}
-
-.rule-section-text {
-  flex: 1;
-}
-
-.rule-section-text h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.rule-section-text p {
-  color: #444;
-  line-height: 1.6;
-  text-align: justify;
-  font-size: 18px;
-  margin-bottom: 15px;
-}
     .featured-text p {
       color: #444;
       line-height: 1.6;
@@ -107,14 +68,35 @@
     }
 
     .rule-section {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
       margin-bottom: 40px;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      padding: 0 60px;
+      box-sizing: border-box;
     }
 
-    .rule-section h2 {
+    .rule-section-spacer {
+      width: 20%;
+      flex-shrink: 0;
+    }
+
+    .rule-section-text {
+      flex: 1;
+    }
+
+    .rule-section-text h2 {
+      margin-top: 0;
       margin-bottom: 10px;
     }
 
-    .rule-section p {
+    .rule-section-text p {
       color: #444;
       line-height: 1.6;
       text-align: justify;
@@ -187,9 +169,12 @@
   </div>
 
   <div class="rule-section">
-    <h2>The Capture Rule:</h2>
-    <p>Is the GLP-1 phenomenon the beginning of a paradigm shift or are we in the middle of a fad that will eventually fade away?</p>
-    <p>My goal throughout this project is to be exposed to a variety of both scientific and anecdotal evidence to form as broad and as clear a picture as possible. If it makes a factual claim about GLP-1 outcomes (efficacy, side effects, long-term use, behavior, economics) and isn't trying to sell something, it will be worth capturing, regardless of which side it argues. Things that may almost count but don't would be advertisements for GLP-1s, anecdotes with no numbers behind them ("my cousin lost 40 pounds and felt amazing") as these are really just data points about individuals, not necessarily the trend. Think-pieces and cultural commentary ("GLP-1s and the end of diet culture") almost count but are opinions about meaning, not evidence about the drug. They may be worth capturing for the "paradigm shift" half of my question, but not as scientific evidence. I'm going to absorb as much as I can but I will refrain from capturing evidence that is explicitly biased.</p>
+    <div class="rule-section-spacer"></div>
+    <div class="rule-section-text">
+      <h2>The Capture Rule:</h2>
+      <p>Is the GLP-1 phenomenon the beginning of a paradigm shift or are we in the middle of a fad that will eventually fade away?</p>
+      <p>My goal throughout this project is to be exposed to a variety of both scientific and anecdotal evidence to form as broad and as clear a picture as possible. If it makes a factual claim about GLP-1 outcomes (efficacy, side effects, long-term use, behavior, economics) and isn't trying to sell something, it will be worth capturing, regardless of which side it argues. Things that may almost count but don't would be advertisements for GLP-1s, anecdotes with no numbers behind them ("my cousin lost 40 pounds and felt amazing") as these are really just data points about individuals, not necessarily the trend. Think-pieces and cultural commentary ("GLP-1s and the end of diet culture") almost count but are opinions about meaning, not evidence about the drug. They may be worth capturing for the "paradigm shift" half of my question, but not as scientific evidence. I'm going to absorb as much as I can but I will refrain from capturing evidence that is explicitly biased.</p>
+    </div>
   </div>
 
   <!-- ===== END ENTRY TEMPLATE ===== -->
@@ -330,6 +315,5 @@
   </div>
 
 </body>
-</html>
 </html>
   
