@@ -106,7 +106,7 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
       width: 100vw;
       position: relative;
@@ -134,6 +134,7 @@
       background-color: #fff6b7;
       padding: 10px 15px;
       max-width: 280px;
+      box-sizing: border-box;
       font-size: 14px;
       box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
       font-family: 'Comic Sans MS', 'Marker Felt', sans-serif;
@@ -151,6 +152,13 @@
       display: block;
       font-size: 15px;
       margin-bottom: 4px;
+    }
+
+    .note a {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 6px;
+      color: #2b2b2b;
     }
   </style>
 </head>
@@ -311,70 +319,80 @@
       </div>
       <img src="ScreenshotGLP17.png" alt="New York Times newsletter: Chefs sound off on GLP-1s, drinking habits and more">
     </div>
-<div class="entry">
-  <div class="note">
-    <strong>Fitness Gets a GLP-1 Pivot</strong>
-    This paid ad from iFIT, a home fitness app, promotes a strength workout plan "purpose-built" for GLP-1 users. It's another example of an established industry, fitness technology, reshaping its product and marketing specifically around people using GLP-1s. This is likely in response to concerns about muscle loss that often accompany rapid weight loss on GLP-1s.
-  </div>
-  <img src="ScreenshotGLP18.png" alt="iFIT Instagram ad: Your GLP-1 strength workout starts now, promoting a fitness plan for GLP-1 users">
-</div>
-  <div class="entry">
-  <div class="note">
-    <strong>A Diet Category of Its Own</strong>
-    This is a second Thrive Market ad, this time showing their website's diet filter options and "GLP-1 Friendly" now sits as its own category right alongside long-established filters like Organic, Ketogenic, and Vegetarian. It's a small but telling detail, GLP-1 use is being treated not as a temporary medical circumstance, but as a permanent, mainstream dietary identity worth building shopping infrastructure around.
-  </div>
-  <img src="ScreenshotGLP19.png" alt="Thrive Market app showing diet filter categories including a new GLP-1 Friendly option alongside Organic, Ketogenic, and Vegetarian">
-</div>
-  <div class="entry">
-  <div class="note">
-    <strong>A Strategic Reset in Healthcare</strong>
-    <a href="https://www.wellsfargo.com/com/insights/how-glp1s-are-reshaping-business-of-healthcare/" target="_blank">Source</a>
-    This Wells Fargo Commercial Banking article, "How GLP-1s Are Reshaping the Business of Healthcare," argues that these drugs are forcing a strategic reset across the entire U.S. healthcare industry. Much like the FTI Consulting and PwC pieces I've already captured, this is another case of a major financial institution treating GLP-1s as a serious business disruption worth formal analysis.
-  </div>
-  <img src="ScreenshotGLP20.png" alt="Wells Fargo Commercial Banking article: How GLP-1s Are Reshaping the Business of Healthcare">
-</div>
-  <div class="entry">
-  <div class="note">
-    <strong>Wall Street and Waistlines</strong>
-    <a href="https://www.cnbc.com/2025/08/26/how-glp-1s-wegovy-zepbound-are-reshaping-the-economy.html" target="_blank">Source</a>
-    This CNBC article lays out the scope of the GLP-1 economic story in a few key points: transformative effects on Wall Street and health outcomes, sweeping implications as adoption grows and new drug applications emerge, and ripple effects reaching well beyond food into retail, travel, and hospitality. It's a useful one-stop summary that ties together a lot of the individual threads I've been capturing separately.
-  </div>
-  <img src="ScreenshotGLP21.png" alt="CNBC article: A world on weight loss drugs - How GLP-1s are reshaping the economy">
-</div>  
-  <div class="entry">
-  <div class="note">
-    <strong>The Worst-Case Math</strong>
-    <a href="https://www.alixpartners.com/insights/102j2bv/how-grocers-can-protect-their-piece-of-a-shrinking-pie-as-glp-1-use-grows/" target="_blank">Source</a>
-    This AlixPartners analysis shows four scenarios for a hypothetical $5 billion grocer as GLP-1 adoption grows. The model ranges from a 6% spending cut (-$21m) to a total loss in customer pressence (-$350m). What stands out is the warning buried in the text, grocers who don't adapt quickly enough risk not just shrinking baskets from GLP-1 users, but losing those customers' baskets entirely to competitors who do adapt.
-  </div>
-  <img src="ScreenshotGLP22.png" alt="AlixPartners chart modeling the projected financial impact of GLP-1 use across four scenarios for a $5 billion grocer">
-</div>  
-  <div class="entry">
-  <div class="note">
-    <strong>Side Effects Become a Market</strong>
-    <a href="PASTE_URL_HERE" target="_blank">Source</a>
-    This paid Instagram ad from a scalp specialist promotes an "Ozempic Hair Loss: The Regrowth Guide." Hair loss is a commonly reported side effect of rapid weight loss, and here it has become its own niche market. It's another example of a business forming around the effects of GLP-1 use, though as an ad it's a signal of market behavior rather than scientific evidence about the drug.
-  </div>
-  <img src="ScreenshotGLP23.png" alt="Instagram ad from askvanessaabouthair: Ozempic Hair Loss, The Regrowth Guide">
-</div> 
+
     <div class="entry">
-  <div class="note">
-    <strong>Hair Loss, Round Two</strong>
-    <a href="PASTE_URL_HERE" target="_blank">Source</a>
-    This is another paid Instagram ad from a different scalp specialist, this time pitching hair vitamins to clients who "started losing hair on GLP-1." Two separate advertisers targeting the same side effect suggests hair loss is common enough to support its own cottage industry. As with the other ads, it shows market behavior rather than scientific evidence about how often hair loss actually occurs.
-  </div>
-  <img src="ScreenshotGLP24.png" alt="Instagram ad from trichologist.emunahbeauty: What I'd recommend when my clients started losing hair on GLP-1">
-</div>
+      <div class="note">
+        <strong>Fitness Gets a GLP-1 Pivot</strong>
+        This paid ad from iFIT, a home fitness app, promotes a strength workout plan "purpose-built" for GLP-1 users. It's another example of an established industry, fitness technology, reshaping its product and marketing specifically around people using GLP-1s. This is likely in response to concerns about muscle loss that often accompany rapid weight loss on GLP-1s.
+      </div>
+      <img src="ScreenshotGLP18.png" alt="iFIT Instagram ad: Your GLP-1 strength workout starts now, promoting a fitness plan for GLP-1 users">
+    </div>
+
     <div class="entry">
-  <div class="note">
-    <strong>Quiting is a "Lose-lose!"</strong>
-    <a href="PASTE_URL_HERE" target="_blank">Source</a>
-    This page claims a Stanford dermatologist warns that quitting a GLP-1 over hair loss is a "lose-lose." It reads like news, but the "Trending Today" label, the view counter, and the product-style branding make me suspect it's an advertorial, possibly the landing page for the hair-loss ads I captured earlier. I'm keeping it because it shows how a real side effect gets turned into a sales funnel, but I wouldn't treat it as scientific evidence.
-  </div>
-  <img src="ScreenshotGLP25.png" alt="Kilgourmd.com article: A Stanford Dermatologist Warns, Quitting Your GLP-1 Because of Hair Loss Is a Lose-Lose">
-</div>
+      <div class="note">
+        <strong>A Diet Category of Its Own</strong>
+        This is a second Thrive Market ad, this time showing their website's diet filter options and "GLP-1 Friendly" now sits as its own category right alongside long-established filters like Organic, Ketogenic, and Vegetarian. It's a small but telling detail, GLP-1 use is being treated not as a temporary medical circumstance, but as a permanent, mainstream dietary identity worth building shopping infrastructure around.
+      </div>
+      <img src="ScreenshotGLP19.png" alt="Thrive Market app showing diet filter categories including a new GLP-1 Friendly option alongside Organic, Ketogenic, and Vegetarian">
+    </div>
+
+    <div class="entry">
+      <div class="note">
+        <strong>A Strategic Reset in Healthcare</strong>
+        <a href="https://www.wellsfargo.com/com/insights/how-glp1s-are-reshaping-business-of-healthcare/" target="_blank">Source</a>
+        This Wells Fargo Commercial Banking article, "How GLP-1s Are Reshaping the Business of Healthcare," argues that these drugs are forcing a strategic reset across the entire U.S. healthcare industry. Much like the FTI Consulting and PwC pieces I've already captured, this is another case of a major financial institution treating GLP-1s as a serious business disruption worth formal analysis.
+      </div>
+      <img src="ScreenshotGLP20.png" alt="Wells Fargo Commercial Banking article: How GLP-1s Are Reshaping the Business of Healthcare">
+    </div>
+
+    <div class="entry">
+      <div class="note">
+        <strong>Wall Street and Waistlines</strong>
+        <a href="https://www.cnbc.com/2025/08/26/how-glp-1s-wegovy-zepbound-are-reshaping-the-economy.html" target="_blank">Source</a>
+        This CNBC article lays out the scope of the GLP-1 economic story in a few key points: transformative effects on Wall Street and health outcomes, sweeping implications as adoption grows and new drug applications emerge, and ripple effects reaching well beyond food into retail, travel, and hospitality. It's a useful one-stop summary that ties together a lot of the individual threads I've been capturing separately.
+      </div>
+      <img src="ScreenshotGLP21.png" alt="CNBC article: A world on weight loss drugs - How GLP-1s are reshaping the economy">
+    </div>
+
+    <div class="entry">
+      <div class="note">
+        <strong>The Worst-Case Math</strong>
+        <a href="https://www.alixpartners.com/insights/102j2bv/how-grocers-can-protect-their-piece-of-a-shrinking-pie-as-glp-1-use-grows/" target="_blank">Source</a>
+        This AlixPartners analysis shows four scenarios for a hypothetical $5 billion grocer as GLP-1 adoption grows. The model ranges from a 6% spending cut (-$21m) to a total loss in customer pressence (-$350m). What stands out is the warning buried in the text, grocers who don't adapt quickly enough risk not just shrinking baskets from GLP-1 users, but losing those customers' baskets entirely to competitors who do adapt.
+      </div>
+      <img src="ScreenshotGLP22.png" alt="AlixPartners chart modeling the projected financial impact of GLP-1 use across four scenarios for a $5 billion grocer">
+    </div>
+
+    <div class="entry">
+      <div class="note">
+        <strong>Side Effects Become a Market</strong>
+        <!-- Add Source link here when you have the URL -->
+        This paid Instagram ad from a scalp specialist promotes an "Ozempic Hair Loss: The Regrowth Guide." Hair loss is a commonly reported side effect of rapid weight loss, and here it has become its own niche market. It's another example of a business forming around the effects of GLP-1 use, though as an ad it's a signal of market behavior rather than scientific evidence about the drug.
+      </div>
+      <img src="ScreenshotGLP23.png" alt="Instagram ad from askvanessaabouthair: Ozempic Hair Loss, The Regrowth Guide">
+    </div>
+
+    <div class="entry">
+      <div class="note">
+        <strong>Hair Loss, Round Two</strong>
+        <!-- Add Source link here when you have the URL -->
+        This is another paid Instagram ad from a different scalp specialist, this time pitching hair vitamins to clients who "started losing hair on GLP-1." Two separate advertisers targeting the same side effect suggests hair loss is common enough to support its own cottage industry. As with the other ads, it shows market behavior rather than scientific evidence about how often hair loss actually occurs.
+      </div>
+      <img src="ScreenshotGLP24.png" alt="Instagram ad from trichologist.emunahbeauty: What I'd recommend when my clients started losing hair on GLP-1">
+    </div>
+
+    <div class="entry">
+      <div class="note">
+        <strong>Quiting is a "Lose-lose!"</strong>
+        <!-- Add Source link here when you have the URL -->
+        This page claims a Stanford dermatologist warns that quitting a GLP-1 over hair loss is a "lose-lose." It reads like news, but the "Trending Today" label, the view counter, and the product-style branding make me suspect it's an advertorial, possibly the landing page for the hair-loss ads I captured earlier. I'm keeping it because it shows how a real side effect gets turned into a sales funnel, but I wouldn't treat it as scientific evidence.
+      </div>
+      <img src="ScreenshotGLP25.png" alt="Kilgourmd.com article: A Stanford Dermatologist Warns, Quitting Your GLP-1 Because of Hair Loss Is a Lose-Lose">
+    </div>
+
   </div>
 
 </body>
+</html>
 </html>
   
