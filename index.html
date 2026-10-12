@@ -125,10 +125,10 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 40px;
+      left: 6px;
       right: 6px;
       background: linear-gradient(to right, #1a3a5c, #2c5f94, #3f7fbd, #6aa5d9);
-      clip-path: polygon(0 0, calc(100% - 45px) 0, 100% 50%, calc(100% - 45px) 100%, 0 100%);
+      clip-path: polygon(45px 0, calc(100% - 45px) 0, 100% 50%, calc(100% - 45px) 100%, 45px 100%, 0 50%);
     }
 
     .category-arrow span {
@@ -140,6 +140,10 @@
       font-size: 15px;
       padding: 18px 10px;
       text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .category-arrow span:first-child {
+      padding-left: 40px;
     }
 
     /* Four columns, one per category */
