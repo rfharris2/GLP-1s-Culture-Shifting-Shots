@@ -104,7 +104,8 @@
       margin-bottom: 15px;
     }
 
-    .gallery {
+    /* Arrow with the four category labels */
+    .category-arrow {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
@@ -116,6 +117,51 @@
       margin-right: -50vw;
       padding: 0 40px;
       box-sizing: border-box;
+      margin-bottom: 25px;
+    }
+
+    .category-arrow::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 40px;
+      right: 6px;
+      background: linear-gradient(to right, #1a3a5c, #2c5f94, #3f7fbd, #6aa5d9);
+      clip-path: polygon(0 0, calc(100% - 45px) 0, 100% 50%, calc(100% - 45px) 100%, 0 100%);
+    }
+
+    .category-arrow span {
+      position: relative;
+      z-index: 1;
+      color: #ffffff;
+      text-align: center;
+      font-weight: bold;
+      font-size: 15px;
+      padding: 18px 10px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+
+    /* Four columns, one per category */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      align-items: start;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      padding: 0 40px;
+      box-sizing: border-box;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
     }
 
     .entry {
@@ -187,216 +233,245 @@
 
   <!-- ===== END ENTRY TEMPLATE ===== -->
 
+  <div class="category-arrow">
+    <span>The Baseline: Health and Obesity Data</span>
+    <span>Consumer Behavior</span>
+    <span>Marketing Signals</span>
+    <span>Anecdotal and Cultural</span>
+  </div>
+
   <div class="gallery">
 
-    <div class="entry">
-      <div class="note">
-        <strong>The Price Tag</strong>
-        This capture shows the cost of obesity itself. I was astounded by the percentage of US Adults living with obesity (40%) and the cost associated with this medical condition ($445 billion).
+    <!-- COLUMN 1: The Baseline: Health and Obesity Data -->
+    <div class="column">
+
+      <div class="entry">
+        <div class="note">
+          <strong>The Price Tag</strong>
+          This capture shows the cost of obesity itself. I was astounded by the percentage of US Adults living with obesity (40%) and the cost associated with this medical condition ($445 billion).
+        </div>
+        <img src="GLP1Screenshot1.png" alt="Obesity Statistics in America 2026 report">
       </div>
-      <img src="GLP1Screenshot1.png" alt="Obesity Statistics in America 2026 report">
+
+      <div class="entry">
+        <div class="note">
+          This capture, in my opinion, shows evidence of how the use of GLP-1s is leading to a paradigm shift. It may be too early to consider this a shift given that we only have a decline over a 4-year period.
+        </div>
+        <img src="ScreenshotGLP2.png" alt="Chart showing US adult obesity rate trend 2015-2026">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>Up, up we go!</strong>
+          This Forbes Health chart shows Medicaid GLP-1 prescriptions climbing from under 1 billion in late 2018 to 8.4 billion by early 2024. That is an increase of roughly 8x in just five years. It's a striking reminder that this isn't just a story about individual choice or private insurance; taxpayer-funded healthcare is absorbing a massive and rapidly growing share of the cost.
+        </div>
+        <img src="ScreenshotGLP10.png" alt="Forbes Health chart showing Medicaid GLP-1 prescriptions rising from 999 million to 8.4 billion, 2019-2024">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>New Uses Emerge</strong>
+          <a href="https://www.pbs.org/newshour/show/as-glp-1s-reshape-america-questions-and-new-uses-emerge" target="_blank">Source</a>
+          This PBS News Hour segment, "As GLP-1s reshape America, questions and new uses emerge," is a 7-minute video report on how these drugs are changing the country and what else they might be used for. I'm capturing it as a lead for the medical side of my question, since most of my evidence so far has been economic. If it covers new treatment applications, it could speak to whether GLP-1s have staying power beyond weight loss.
+        </div>
+        <img src="ScreenshotGLP27.png" alt="PBS News Hour video: As GLP-1s reshape America, questions and new uses emerge">
+      </div>
+
     </div>
 
-    <div class="entry">
-      <div class="note">
-        This capture, in my opinion, shows evidence of how the use of GLP-1s is leading to a paradigm shift. It may be too early to consider this a shift given that we only have a decline over a 4-year period.
+    <!-- COLUMN 2: Consumer Behavior -->
+    <div class="column">
+
+      <div class="entry">
+        <div class="note">
+          This Instagram post cites McKinsey data showing just how quickly grocery spending shifts once someone starts a GLP-1: within 6 months, purchases of chips, sweet bakery items, cookies, and soft drinks all dropped by 7-11%, while yogurt and fresh produce rose. What stands out to me is how granular this data is — it's not just "people eat less," it's a full-scale reordering of the grocery cart. This feels like strong evidence that GLP-1s are reshaping the food industry from the consumer side, not just the pharmaceutical side.
+        </div>
+        <img src="ScreenshotGLP7.png" alt="Instagram post citing McKinsey data on grocery spending changes 6 months after GLP-1 adoption">
       </div>
-      <img src="ScreenshotGLP2.png" alt="Chart showing US adult obesity rate trend 2015-2026">
+
+      <div class="entry">
+        <div class="note">
+          <strong>Shelves Are Shifting</strong>
+          This article adds to the growing pile of evidence that grocery retailers themselves are having to respond to this shift — not just food manufacturers. Households with at least 1 GLP-1 user are reducing their grocery spending by 5.3% within six months of adopting the medication. It reinforces a pattern I keep seeing across my research: this isn't a story confined to pharmacies or doctor's offices, it's reaching all the way down to what's stocked on the shelf in front of you.
+        </div>
+        <img src="ScreenshotGLP11.png" alt="Checkout article headline: How GLP-1 Adoption Is Changing Supermarket Shelves">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>The Worst-Case Math</strong>
+          <a href="https://www.alixpartners.com/insights/102j2bv/how-grocers-can-protect-their-piece-of-a-shrinking-pie-as-glp-1-use-grows/" target="_blank">Source</a>
+          This AlixPartners analysis shows four scenarios for a hypothetical $5 billion grocer as GLP-1 adoption grows. The model ranges from a 6% spending cut (-$21m) to a total loss in customer pressence (-$350m). What stands out is the warning buried in the text, grocers who don't adapt quickly enough risk not just shrinking baskets from GLP-1 users, but losing those customers' baskets entirely to competitors who do adapt.
+        </div>
+        <img src="ScreenshotGLP22.png" alt="AlixPartners chart modeling the projected financial impact of GLP-1 use across four scenarios for a $5 billion grocer">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>Wall Street and Waistlines</strong>
+          <a href="https://www.cnbc.com/2025/08/26/how-glp-1s-wegovy-zepbound-are-reshaping-the-economy.html" target="_blank">Source</a>
+          This CNBC article lays out the scope of the GLP-1 economic story in a few key points: transformative effects on Wall Street and health outcomes, sweeping implications as adoption grows and new drug applications emerge, and ripple effects reaching well beyond food into retail, travel, and hospitality. It's a useful one-stop summary that ties together a lot of the individual threads I've been capturing separately.
+        </div>
+        <img src="ScreenshotGLP21.png" alt="CNBC article: A world on weight loss drugs - How GLP-1s are reshaping the economy">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>A Strategic Reset in Healthcare</strong>
+          <a href="https://www.wellsfargo.com/com/insights/how-glp1s-are-reshaping-business-of-healthcare/" target="_blank">Source</a>
+          This Wells Fargo Commercial Banking article, "How GLP-1s Are Reshaping the Business of Healthcare," argues that these drugs are forcing a strategic reset across the entire U.S. healthcare industry. Much like the FTI Consulting and PwC pieces I've already captured, this is another case of a major financial institution treating GLP-1s as a serious business disruption worth formal analysis.
+        </div>
+        <img src="ScreenshotGLP20.png" alt="Wells Fargo Commercial Banking article: How GLP-1s Are Reshaping the Business of Healthcare">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>Rewriting the Rulebook</strong>
+          This FTI Consulting article, "GLP-1 Drugs Are Rewriting the Rules of Food and Beverage," comes from a major global consulting firm (not a health outlet or social media account) which tells me companies are now paying serious money for strategic advice on how to navigate this shift. When consulting firms start publishing formal insights on a topic, it's usually a sign that boardrooms are already treating it as an urgent, structural issue rather than a passing trend.
+        </div>
+        <img src="ScreenshotGLP14.png" alt="FTI Consulting article: GLP-1 Drugs Are Rewriting the Rules of Food and Beverage">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>From Molecules to Milestones</strong>
+          This PwC survey, "Business Model Reinvention: GLP-1 Trends & Impact Survey," argues that GLP-1s are forcing companies to lead through disruption and reinvent themselves. Interestingly, PwC is the same firm Ali Furman (from my Aspen Ideas entry) works for, which suggests this isn't just one person's opinion rather it's becoming an institutional viewpoint across the consulting industry.
+        </div>
+        <img src="ScreenshotGLP15.png" alt="PwC article: From molecules to milestones - Reinventing for the future of weight loss drugs">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>The Data that Counts</strong>
+          This diagram from "How GLP-1 Drugs Could Reshape the Economy" breaks the question down into three drivers: access (how many people can get it), duration (how long they stay on it), and persistence (whether habits stick after stopping). I like this framework because it cuts through a lot of the hype and gets at the actual uncertainty of the impact behind the wide use of GLP-1s. We won't know the real economic effect until we have answers to all three, not just the first one.
+        </div>
+        <img src="ScreenshotGLP13.png" alt="Diagram titled What Determines the Economic Effect, showing three drivers: Access, Duration, and Persistence, leading to Effect Size">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          This WSJ podcast episode, "How Big Food Is Navigating the GLP-1 Era," highlights how food companies are being forced to rethink their entire strategy. For decades, the industry leaned into sugar, salt, and flavor to drive sales — but with GLP-1s and health-conscious shopping on the rise, that playbook is being challenged. It's a good example of how this isn't just a personal health story, but one that's reshaping entire industries from the top down.
+        </div>
+        <img src="ScreenshotGLP6.png" alt="WSJ podcast The Journal episode: How Big Food Is Navigating the GLP-1 Era">
+      </div>
+
     </div>
 
-    <div class="entry">
-      <div class="note">
-        An annual savings of $580 million on jet fuel!!! What?!?!?! This is an anecdotal capture but one I found to be quite interesting especially the comment regarding the push to evaluate our food environment.
+    <!-- COLUMN 3: Marketing Signals -->
+    <div class="column">
+
+      <div class="entry">
+        <div class="note">
+          <strong>Marketing-Behavior Signal</strong>
+          This pop-up ad from Grüns directly targets GLP-1 users, a trend that I am beginning to see more and more. The discount is specifically framed around "I'm on a GLP-1 but I don't feel great." It's a striking example of how quickly companies are adapting their marketing to speak directly to this new consumer segment — treating GLP-1 side effects and nutrient gaps as a business opportunity rather than just a medical footnote.
+        </div>
+        <img src="ScreenshotGLP8.png" alt="Grüns discount pop-up ad targeting GLP-1 users with tailored problem options">
       </div>
-      <img src="ScreenshotGLP4.png" alt="Reddit discussion on long-term societal effects of GLP-1 adoption">
+
+      <div class="entry">
+        <div class="note">
+          <strong>Marketing-Behavior Signal 2</strong>
+          This is a paid Instagram ad from Thrive Market, a grocery delivery company, titled "How to eat on GLP-1s in 2026." It's a clear sign that grocery brands aren't just reacting to changed spending habits, they're now actively running ad campaigns to court GLP-1 users specifically, treating them as a distinct and valuable customer segment worth targeting directly.
+        </div>
+        <img src="ScreenshotGLP16.png" alt="Thrive Market Instagram ad: How to eat on GLP-1s in 2026, showing a bowl of strawberries, banana, and yogurt">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>A Diet Category of Its Own</strong>
+          This is a second Thrive Market ad, this time showing their website's diet filter options and "GLP-1 Friendly" now sits as its own category right alongside long-established filters like Organic, Ketogenic, and Vegetarian. It's a small but telling detail, GLP-1 use is being treated not as a temporary medical circumstance, but as a permanent, mainstream dietary identity worth building shopping infrastructure around.
+        </div>
+        <img src="ScreenshotGLP19.png" alt="Thrive Market app showing diet filter categories including a new GLP-1 Friendly option alongside Organic, Ketogenic, and Vegetarian">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>Fitness Gets a GLP-1 Pivot</strong>
+          This paid ad from iFIT, a home fitness app, promotes a strength workout plan "purpose-built" for GLP-1 users. It's another example of an established industry, fitness technology, reshaping its product and marketing specifically around people using GLP-1s. This is likely in response to concerns about muscle loss that often accompany rapid weight loss on GLP-1s.
+        </div>
+        <img src="ScreenshotGLP18.png" alt="iFIT Instagram ad: Your GLP-1 strength workout starts now, promoting a fitness plan for GLP-1 users">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>Side Effects Become a Market</strong>
+          <!-- Add Source link here when you have the URL -->
+          This paid Instagram ad from a scalp specialist promotes an "Ozempic Hair Loss: The Regrowth Guide." Hair loss is a commonly reported side effect of rapid weight loss, and here it has become its own niche market. It's another example of a business forming around the effects of GLP-1 use, though as an ad it's a signal of market behavior rather than scientific evidence about the drug.
+        </div>
+        <img src="ScreenshotGLP23.png" alt="Instagram ad from askvanessaabouthair: Ozempic Hair Loss, The Regrowth Guide">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>Hair Loss, Round Two</strong>
+          <!-- Add Source link here when you have the URL -->
+          This is another paid Instagram ad from a different scalp specialist, this time pitching hair vitamins to clients who "started losing hair on GLP-1." Two separate advertisers targeting the same side effect suggests hair loss is common enough to support its own cottage industry. As with the other ads, it shows market behavior rather than scientific evidence about how often hair loss actually occurs.
+        </div>
+        <img src="ScreenshotGLP24.png" alt="Instagram ad from trichologist.emunahbeauty: What I'd recommend when my clients started losing hair on GLP-1">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>Quiting is a "Lose-lose!"</strong>
+          <!-- Add Source link here when you have the URL -->
+          This page claims a Stanford dermatologist warns that quitting a GLP-1 over hair loss is a "lose-lose." It reads like news, but the "Trending Today" label, the view counter, and the product-style branding make me suspect it's an advertorial, possibly the landing page for the hair-loss ads I captured earlier. I'm keeping it because it shows how a real side effect gets turned into a sales funnel, but I wouldn't treat it as scientific evidence.
+        </div>
+        <img src="ScreenshotGLP25.png" alt="Kilgourmd.com article: A Stanford Dermatologist Warns, Quitting Your GLP-1 Because of Hair Loss Is a Lose-Lose">
+      </div>
+
     </div>
 
-    <div class="entry">
-      <div class="note">
-        This Instagram post from Aspen Ideas Health captures a quote from Ali Furman, a Partner and U.S. Consumer Markets Industry Leader at PwC, comparing the disruption of GLP-1s to that of the smartphone. She argues new brands, products, and entire industries are forming around this drug, reinforcing the idea that this is as much an economic and cultural shift as a health one.
+    <!-- COLUMN 4: Anecdotal and Cultural -->
+    <div class="column">
+
+      <div class="entry">
+        <div class="note">
+          An annual savings of $580 million on jet fuel!!! What?!?!?! This is an anecdotal capture but one I found to be quite interesting especially the comment regarding the push to evaluate our food environment.
+        </div>
+        <img src="ScreenshotGLP4.png" alt="Reddit discussion on long-term societal effects of GLP-1 adoption">
       </div>
-      <img src="ScreenshotGLP5.png" alt="Instagram post from Aspen Ideas Health quoting Ali Furman on GLP-1s as a technological-style disruption">
+
+      <div class="entry">
+        <div class="note">
+          <strong>Capital Follows Cravings</strong>
+          This Instagram post argues that GLP-1s are impacting spending on fast food, soda, alcohol, and oversized apparel all at once. The author's core claim is that this money doesn't disappear, but rather its reallocated toward wellness, and eventually toward a repricing of "safe" consumer investments like fast food and soda stocks. It's one of the more ambitious arguments I've found for just how far-reaching this shift could be.
+        </div>
+        <img src="ScreenshotGLP9.png" alt="Instagram post by realryanhawkes arguing GLP-1s are draining billions from overconsumption-based industries">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          This Instagram post from Aspen Ideas Health captures a quote from Ali Furman, a Partner and U.S. Consumer Markets Industry Leader at PwC, comparing the disruption of GLP-1s to that of the smartphone. She argues new brands, products, and entire industries are forming around this drug, reinforcing the idea that this is as much an economic and cultural shift as a health one.
+        </div>
+        <img src="ScreenshotGLP5.png" alt="Instagram post from Aspen Ideas Health quoting Ali Furman on GLP-1s as a technological-style disruption">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>Straight from the CEO</strong>
+          This episode of The Prof G Pod features Eli Lilly's CEO discussing how GLP-1s will reshape America. This is a rare instance of hearing directly from the company profiting most from this trend, rather than an outside analyst or commentator. It's worth watching critically, since the CEO obviously has a stake in framing these drugs as a "miracle," but it's also a useful window into how the industry itself is thinking about long-term impact.
+        </div>
+        <img src="ScreenshotGLP1.png" alt="YouTube video: Eli Lilly CEO discusses How GLP-1s Will Reshape America on The Prof G Pod with Scott Galloway">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>Changing your lifestyle with GLP-1s</strong>
+          This TODAY show clip features Heidi Skolnik promoting her book "Your GLP-1 Game Plan," aimed at helping people eat, move, and thrive while on weight-loss medication. It's a good example of an entirely new publishing and advice market forming around GLP-1 users. This is proof that this drug isn't just changing what people buy, it's creating brand-new careers, books, and content that didn't exist a few years ago.
+        </div>
+        <img src="ScreenshotGLP12.png" alt="TODAY show YouTube video: Expert Tips for Thriving While on GLP-1 Medications, featuring the book Your GLP-1 Game Plan by Heidi Skolnik">
+      </div>
+
+      <div class="entry">
+        <div class="note">
+          <strong>The End of the Second Martini</strong>
+          This New York Times newsletter surveyed a dozen chefs and restaurant owners about how dining habits are changing, including the rise of the 5 p.m. reservation and the decline of the second cocktail. It's a good reminder that this shift isn't limited to grocery stores — it's reaching into restaurants and hospitality too, changing not just what people eat, but how and when they socialize around food and drink.
+        </div>
+        <img src="ScreenshotGLP17.png" alt="New York Times newsletter: Chefs sound off on GLP-1s, drinking habits and more">
+      </div>
+
     </div>
 
-    <div class="entry">
-      <div class="note">
-        This WSJ podcast episode, "How Big Food Is Navigating the GLP-1 Era," highlights how food companies are being forced to rethink their entire strategy. For decades, the industry leaned into sugar, salt, and flavor to drive sales — but with GLP-1s and health-conscious shopping on the rise, that playbook is being challenged. It's a good example of how this isn't just a personal health story, but one that's reshaping entire industries from the top down.
-      </div>
-      <img src="ScreenshotGLP6.png" alt="WSJ podcast The Journal episode: How Big Food Is Navigating the GLP-1 Era">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        This Instagram post cites McKinsey data showing just how quickly grocery spending shifts once someone starts a GLP-1: within 6 months, purchases of chips, sweet bakery items, cookies, and soft drinks all dropped by 7-11%, while yogurt and fresh produce rose. What stands out to me is how granular this data is — it's not just "people eat less," it's a full-scale reordering of the grocery cart. This feels like strong evidence that GLP-1s are reshaping the food industry from the consumer side, not just the pharmaceutical side.
-      </div>
-      <img src="ScreenshotGLP7.png" alt="Instagram post citing McKinsey data on grocery spending changes 6 months after GLP-1 adoption">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>Marketing-Behavior Signal</strong>
-        This pop-up ad from Grüns directly targets GLP-1 users, a trend that I am beginning to see more and more. The discount is specifically framed around "I'm on a GLP-1 but I don't feel great." It's a striking example of how quickly companies are adapting their marketing to speak directly to this new consumer segment — treating GLP-1 side effects and nutrient gaps as a business opportunity rather than just a medical footnote.
-      </div>
-      <img src="ScreenshotGLP8.png" alt="Grüns discount pop-up ad targeting GLP-1 users with tailored problem options">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>Capital Follows Cravings</strong>
-        This Instagram post argues that GLP-1s are impacting spending on fast food, soda, alcohol, and oversized apparel all at once. The author's core claim is that this money doesn't disappear, but rather its reallocated toward wellness, and eventually toward a repricing of "safe" consumer investments like fast food and soda stocks. It's one of the more ambitious arguments I've found for just how far-reaching this shift could be.
-      </div>
-      <img src="ScreenshotGLP9.png" alt="Instagram post by realryanhawkes arguing GLP-1s are draining billions from overconsumption-based industries">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>Up, up we go!</strong>
-        This Forbes Health chart shows Medicaid GLP-1 prescriptions climbing from under 1 billion in late 2018 to 8.4 billion by early 2024. That is an increase of roughly 8x in just five years. It's a striking reminder that this isn't just a story about individual choice or private insurance; taxpayer-funded healthcare is absorbing a massive and rapidly growing share of the cost.
-      </div>
-      <img src="ScreenshotGLP10.png" alt="Forbes Health chart showing Medicaid GLP-1 prescriptions rising from 999 million to 8.4 billion, 2019-2024">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>Shelves Are Shifting</strong>
-        This article adds to the growing pile of evidence that grocery retailers themselves are having to respond to this shift — not just food manufacturers. Households with at least 1 GLP-1 user are reducing their grocery spending by 5.3% within six months of adopting the medication. It reinforces a pattern I keep seeing across my research: this isn't a story confined to pharmacies or doctor's offices, it's reaching all the way down to what's stocked on the shelf in front of you.
-      </div>
-      <img src="ScreenshotGLP11.png" alt="Checkout article headline: How GLP-1 Adoption Is Changing Supermarket Shelves">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>Changing your lifestyle with GLP-1s</strong>
-        This TODAY show clip features Heidi Skolnik promoting her book "Your GLP-1 Game Plan," aimed at helping people eat, move, and thrive while on weight-loss medication. It's a good example of an entirely new publishing and advice market forming around GLP-1 users. This is proof that this drug isn't just changing what people buy, it's creating brand-new careers, books, and content that didn't exist a few years ago.
-      </div>
-      <img src="ScreenshotGLP12.png" alt="TODAY show YouTube video: Expert Tips for Thriving While on GLP-1 Medications, featuring the book Your GLP-1 Game Plan by Heidi Skolnik">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>Straight from the CEO</strong>
-        This episode of The Prof G Pod features Eli Lilly's CEO discussing how GLP-1s will reshape America. This is a rare instance of hearing directly from the company profiting most from this trend, rather than an outside analyst or commentator. It's worth watching critically, since the CEO obviously has a stake in framing these drugs as a "miracle," but it's also a useful window into how the industry itself is thinking about long-term impact.
-      </div>
-      <img src="ScreenshotGLP1.png" alt="YouTube video: Eli Lilly CEO discusses How GLP-1s Will Reshape America on The Prof G Pod with Scott Galloway">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>The Data that Counts</strong>
-        This diagram from "How GLP-1 Drugs Could Reshape the Economy" breaks the question down into three drivers: access (how many people can get it), duration (how long they stay on it), and persistence (whether habits stick after stopping). I like this framework because it cuts through a lot of the hype and gets at the actual uncertainty of the impact behind the wide use of GLP-1s. We won't know the real economic effect until we have answers to all three, not just the first one.
-      </div>
-      <img src="ScreenshotGLP13.png" alt="Diagram titled What Determines the Economic Effect, showing three drivers: Access, Duration, and Persistence, leading to Effect Size">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>Rewriting the Rulebook</strong>
-        This FTI Consulting article, "GLP-1 Drugs Are Rewriting the Rules of Food and Beverage," comes from a major global consulting firm (not a health outlet or social media account) which tells me companies are now paying serious money for strategic advice on how to navigate this shift. When consulting firms start publishing formal insights on a topic, it's usually a sign that boardrooms are already treating it as an urgent, structural issue rather than a passing trend.
-      </div>
-      <img src="ScreenshotGLP14.png" alt="FTI Consulting article: GLP-1 Drugs Are Rewriting the Rules of Food and Beverage">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>From Molecules to Milestones</strong>
-        This PwC survey, "Business Model Reinvention: GLP-1 Trends & Impact Survey," argues that GLP-1s are forcing companies to lead through disruption and reinvent themselves. Interestingly, PwC is the same firm Ali Furman (from my Aspen Ideas entry) works for, which suggests this isn't just one person's opinion rather it's becoming an institutional viewpoint across the consulting industry.
-      </div>
-      <img src="ScreenshotGLP15.png" alt="PwC article: From molecules to milestones - Reinventing for the future of weight loss drugs">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>Marketing-Behavior Signal 2</strong>
-        This is a paid Instagram ad from Thrive Market, a grocery delivery company, titled "How to eat on GLP-1s in 2026." It's a clear sign that grocery brands aren't just reacting to changed spending habits, they're now actively running ad campaigns to court GLP-1 users specifically, treating them as a distinct and valuable customer segment worth targeting directly.
-      </div>
-      <img src="ScreenshotGLP16.png" alt="Thrive Market Instagram ad: How to eat on GLP-1s in 2026, showing a bowl of strawberries, banana, and yogurt">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>The End of the Second Martini</strong>
-        This New York Times newsletter surveyed a dozen chefs and restaurant owners about how dining habits are changing, including the rise of the 5 p.m. reservation and the decline of the second cocktail. It's a good reminder that this shift isn't limited to grocery stores — it's reaching into restaurants and hospitality too, changing not just what people eat, but how and when they socialize around food and drink.
-      </div>
-      <img src="ScreenshotGLP17.png" alt="New York Times newsletter: Chefs sound off on GLP-1s, drinking habits and more">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>Fitness Gets a GLP-1 Pivot</strong>
-        This paid ad from iFIT, a home fitness app, promotes a strength workout plan "purpose-built" for GLP-1 users. It's another example of an established industry, fitness technology, reshaping its product and marketing specifically around people using GLP-1s. This is likely in response to concerns about muscle loss that often accompany rapid weight loss on GLP-1s.
-      </div>
-      <img src="ScreenshotGLP18.png" alt="iFIT Instagram ad: Your GLP-1 strength workout starts now, promoting a fitness plan for GLP-1 users">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>A Diet Category of Its Own</strong>
-        This is a second Thrive Market ad, this time showing their website's diet filter options and "GLP-1 Friendly" now sits as its own category right alongside long-established filters like Organic, Ketogenic, and Vegetarian. It's a small but telling detail, GLP-1 use is being treated not as a temporary medical circumstance, but as a permanent, mainstream dietary identity worth building shopping infrastructure around.
-      </div>
-      <img src="ScreenshotGLP19.png" alt="Thrive Market app showing diet filter categories including a new GLP-1 Friendly option alongside Organic, Ketogenic, and Vegetarian">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>A Strategic Reset in Healthcare</strong>
-        <a href="https://www.wellsfargo.com/com/insights/how-glp1s-are-reshaping-business-of-healthcare/" target="_blank">Source</a>
-        This Wells Fargo Commercial Banking article, "How GLP-1s Are Reshaping the Business of Healthcare," argues that these drugs are forcing a strategic reset across the entire U.S. healthcare industry. Much like the FTI Consulting and PwC pieces I've already captured, this is another case of a major financial institution treating GLP-1s as a serious business disruption worth formal analysis.
-      </div>
-      <img src="ScreenshotGLP20.png" alt="Wells Fargo Commercial Banking article: How GLP-1s Are Reshaping the Business of Healthcare">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>Wall Street and Waistlines</strong>
-        <a href="https://www.cnbc.com/2025/08/26/how-glp-1s-wegovy-zepbound-are-reshaping-the-economy.html" target="_blank">Source</a>
-        This CNBC article lays out the scope of the GLP-1 economic story in a few key points: transformative effects on Wall Street and health outcomes, sweeping implications as adoption grows and new drug applications emerge, and ripple effects reaching well beyond food into retail, travel, and hospitality. It's a useful one-stop summary that ties together a lot of the individual threads I've been capturing separately.
-      </div>
-      <img src="ScreenshotGLP21.png" alt="CNBC article: A world on weight loss drugs - How GLP-1s are reshaping the economy">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>The Worst-Case Math</strong>
-        <a href="https://www.alixpartners.com/insights/102j2bv/how-grocers-can-protect-their-piece-of-a-shrinking-pie-as-glp-1-use-grows/" target="_blank">Source</a>
-        This AlixPartners analysis shows four scenarios for a hypothetical $5 billion grocer as GLP-1 adoption grows. The model ranges from a 6% spending cut (-$21m) to a total loss in customer presence (-$350m). What stands out is the warning buried in the text, grocers who don't adapt quickly enough risk not just shrinking baskets from GLP-1 users, but losing those customers' baskets entirely to competitors who do adapt.
-      </div>
-      <img src="ScreenshotGLP22.png" alt="AlixPartners chart modeling the projected financial impact of GLP-1 use across four scenarios for a $5 billion grocer">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>Side Effects Become a Market</strong>
-        <!-- Add Source link here when you have the URL -->
-        This paid Instagram ad from a scalp specialist promotes an "Ozempic Hair Loss: The Regrowth Guide." Hair loss is a commonly reported side effect of rapid weight loss, and here it has become its own niche market. It's another example of a business forming around the effects of GLP-1 use, though as an ad it's a signal of market behavior rather than scientific evidence about the drug.
-      </div>
-      <img src="ScreenshotGLP23.png" alt="Instagram ad from askvanessaabouthair: Ozempic Hair Loss, The Regrowth Guide">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>Hair Loss, Round Two</strong>
-        <!-- Add Source link here when you have the URL -->
-        This is another paid Instagram ad from a different scalp specialist, this time pitching hair vitamins to clients who "started losing hair on GLP-1." Two separate advertisers targeting the same side effect suggests hair loss is common enough to support its own cottage industry. As with the other ads, it shows market behavior rather than scientific evidence about how often hair loss actually occurs.
-      </div>
-      <img src="ScreenshotGLP24.png" alt="Instagram ad from trichologist.emunahbeauty: What I'd recommend when my clients started losing hair on GLP-1">
-    </div>
-
-    <div class="entry">
-      <div class="note">
-        <strong>Quiting is a "Lose-lose!"</strong>
-        <!-- Add Source link here when you have the URL -->
-        This page claims a Stanford dermatologist warns that quitting a GLP-1 over hair loss is a "lose-lose." It reads like news, but the "Trending Today" label, the view counter, and the product-style branding make me suspect it's an advertorial, possibly the landing page for the hair-loss ads I captured earlier. I'm keeping it because it shows how a real side effect gets turned into a sales funnel, but I wouldn't treat it as scientific evidence.
-      </div>
-      <img src="ScreenshotGLP25.png" alt="Kilgourmd.com article: A Stanford Dermatologist Warns, Quitting Your GLP-1 Because of Hair Loss Is a Lose-Lose">
-    </div>
-<div class="entry">
-  <div class="note">
-    <strong>Cancer, Sleep Apnes, Addiction, Oh, My!</strong>
-    <a href="https://www.pbs.org/newshour/show/as-glp-1s-reshape-america-questions-and-new-uses-emerge" target="_blank">Source</a>
-    This PBS News Hour segment, "As GLP-1s reshape America, questions and new uses emerge," is a 7-minute video report on how these drugs are changing the country and what else they might be used for. I'm capturing it as a lead for the medical side of my question, since most of my evidence so far has been economic. If it covers new treatment applications, it could speak to whether GLP-1s have staying power beyond weight loss.
-  </div>
-  <img src="ScreenshotGLP27.png" alt="PBS News Hour video: As GLP-1s reshape America, questions and new uses emerge">
-</div>
   </div>
 
 </body>
