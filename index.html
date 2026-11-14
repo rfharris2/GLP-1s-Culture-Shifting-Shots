@@ -300,6 +300,69 @@
       color: #2b2b2b;
     }
 
+    /* Poll */
+    .poll {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      box-sizing: border-box;
+      margin-top: 40px;
+      padding: 40px 20px;
+      background: rgba(26, 58, 92, 0.08);
+      border-top: 1px solid rgba(26, 58, 92, 0.2);
+      border-bottom: 1px solid rgba(26, 58, 92, 0.2);
+      text-align: center;
+    }
+
+    .poll h2 { color: #1a3a5c; font-size: 28px; margin: 0 0 8px; }
+    .poll p { font-size: 18px; color: #444; margin: 0 0 20px; }
+
+    .poll-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .poll-buttons button {
+      font-family: Georgia, serif;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 14px 30px;
+      border: 2px solid #1a3a5c;
+      border-radius: 40px;
+      background: #ffffff;
+      color: #1a3a5c;
+      cursor: pointer;
+    }
+
+    .poll-buttons button:hover:not(:disabled) { background: #1a3a5c; color: #ffffff; }
+    .poll-buttons button:disabled { opacity: 0.6; cursor: default; }
+
+    .poll-results { max-width: 560px; margin: 28px auto 0; }
+    .poll-row { text-align: left; margin-bottom: 14px; font-size: 16px; }
+
+    .poll-bar {
+      height: 22px;
+      background: #ffffff;
+      border-radius: 11px;
+      overflow: hidden;
+      margin-top: 4px;
+      box-shadow: inset 0 0 0 1px rgba(26,58,92,0.25);
+    }
+
+    .poll-fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(to right, #1a3a5c, #6aa5d9);
+      transition: width 0.6s ease;
+    }
+
+    .poll-note { font-size: 14px !important; font-style: italic; margin-top: 16px !important; }
+
     /* Closing section */
     .exit {
       width: 100vw;
@@ -468,7 +531,7 @@
         <div class="note">
           <strong>Up, up we go!</strong>
           <a href="https://www.forbes.com/health/weight-loss/glp-1-statistics/" target="_blank">Source</a>
-          This Forbes Health chart, with data from KFF, shows Medicaid GLP-1 prescriptions climbing from 999 million in late 2018 to 8.4 billion by early 2024, roughly 8x in five years. It's a striking reminder that this isn't just a story about individual choice or private insurance; taxpayer-funded healthcare is absorbing a massive and rapidly growing share of the cost.
+          This Forbes Health chart shows Medicaid GLP-1 prescriptions climbing from under 1 billion in late 2018 to 8.4 billion by early 2024. That is an increase of roughly 8x in just five years. It's a striking reminder that this isn't just a story about individual choice or private insurance; taxpayer-funded healthcare is absorbing a massive and rapidly growing share of the cost.
         </div>
         <img src="ScreenshotGLP10.png" alt="Forbes Health chart showing Medicaid GLP-1 prescriptions rising from 999 million to 8.4 billion, 2019-2024">
       </div>
@@ -624,14 +687,16 @@
         </div>
         <img src="ScreenshotGLP6.png" alt="WSJ podcast The Journal episode: How Big Food Is Navigating the GLP-1 Era">
       </div>
-<div class="entry">
+
+      <div class="entry">
         <div class="note">
           <strong>The Unexpected Part</strong>
           <a href="https://www.bcg.com/publications/2026/glp-1-consumer-behavior-shift" target="_blank">Source</a>
-          This Boston Consulting Group article, "The Unexpected Ways GLP-1s Are Transforming Consumer Behavior," is the fourth consulting-firm piece I've captured, after FTI, PwC and AlixPartners. That repetition is itself a signal! There are several competing firms that are publishing on the same shift. BCG sells advice to the companies it's writing about, so I'm treating it as informed analysis, not independent evidence.
+          This Boston Consulting Group article, "The Unexpected Ways GLP-1s Are Transforming Consumer Behavior," is the fourth consulting-firm piece I've captured, after FTI, PwC and AlixPartners. That repetition is itself a signal: several competing firms are publishing on the same shift. BCG sells advice to the companies it's writing about, so I'm treating it as informed analysis, not independent evidence. I haven't read the full article yet, so I'll add its key findings once I do.
         </div>
-        <img src="ScreenshotGLP40.png" alt="BCG article: The Unexpected Ways GLP-1s Are Transforming Consumer Behavior, August 2026">
+        <img src="ScreenshotGLP41.png" alt="BCG article: The Unexpected Ways GLP-1s Are Transforming Consumer Behavior, August 2026">
       </div>
+
     </div>
 
     <!-- COLUMN 3: Marketing Signals -->
@@ -766,7 +831,8 @@
         </div>
         <img src="ScreenshotGLP29.png" alt="Business Insider YouTube video: You're Being Lied To About Ozempic, showing a Daily Mail article about celebrities rumored to be on Ozempic">
       </div>
-<div class="entry">
+
+      <div class="entry">
         <div class="note">
           <strong>The Good, The Bad & The Unexpected</strong>
           <a href="https://www.buzzfeed.com/lily_grossinger/glp1-side-effects-july-2026" target="_blank">Source</a>
@@ -774,8 +840,31 @@
         </div>
         <img src="ScreenshotGLP39.png" alt="BuzzFeed article: You Have To Be Careful, 24 Candid GLP-1 Stories About the Good, the Bad, and the Unexpected Side-Effects of Weight Loss Drugs">
       </div>
+
     </div>
 
+  </div>
+
+  <div class="poll">
+    <h2>What do you think?</h2>
+    <p>After everything on this page: fad or culture shift?</p>
+
+    <div class="poll-buttons">
+      <button id="vote-fad" type="button">A passing fad</button>
+      <button id="vote-shift" type="button">A culture shift</button>
+    </div>
+
+    <div class="poll-results">
+      <div class="poll-row">
+        A passing fad: <strong id="count-fad">0</strong> (<span id="pct-fad">0</span>%)
+        <div class="poll-bar"><div class="poll-fill" id="bar-fad"></div></div>
+      </div>
+      <div class="poll-row">
+        A culture shift: <strong id="count-shift">0</strong> (<span id="pct-shift">0</span>%)
+        <div class="poll-bar"><div class="poll-fill" id="bar-shift"></div></div>
+      </div>
+      <p class="poll-note" id="poll-msg">Unscientific, and one vote per browser.</p>
+    </div>
   </div>
 
   <div class="exit">
@@ -797,6 +886,62 @@
       </details>
     </div>
   </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey: "AIzaSyBlOia9N3LJQYx-b3rLeOYqwepJ16QSNZk",
+      authDomain: "glp-1s-culture-shifting-shots.firebaseapp.com",
+      databaseURL: "https://glp-1s-culture-shifting-shots-default-rtdb.firebaseio.com",
+      projectId: "glp-1s-culture-shifting-shots"
+    });
+    var db = firebase.database();
+
+    function render(fad, shift) {
+      var total = fad + shift;
+      var pf = total ? Math.round(fad / total * 100) : 0;
+      var ps = total ? 100 - pf : 0;
+      document.getElementById('count-fad').textContent = fad;
+      document.getElementById('count-shift').textContent = shift;
+      document.getElementById('pct-fad').textContent = pf;
+      document.getElementById('pct-shift').textContent = ps;
+      document.getElementById('bar-fad').style.width = pf + '%';
+      document.getElementById('bar-shift').style.width = ps + '%';
+    }
+
+    db.ref('votes').on('value', function (snap) {
+      var v = snap.val() || {};
+      render(v.fad || 0, v.shift || 0);
+    });
+
+    function hasVoted() {
+      try { return localStorage.getItem('glp1-voted') === '1'; } catch (e) { return false; }
+    }
+
+    function lockButtons(msg) {
+      document.getElementById('vote-fad').disabled = true;
+      document.getElementById('vote-shift').disabled = true;
+      document.getElementById('poll-msg').textContent = msg;
+    }
+
+    if (hasVoted()) lockButtons('Thanks, you already voted. Results update live.');
+
+    function vote(choice) {
+      if (hasVoted()) return;
+      db.ref('votes/' + choice).transaction(function (n) { return (n || 0) + 1; })
+        .then(function () {
+          try { localStorage.setItem('glp1-voted', '1'); } catch (e) {}
+          lockButtons('Thanks for voting. Results update live.');
+        })
+        .catch(function () {
+          document.getElementById('poll-msg').textContent = 'Could not record your vote. Try again later.';
+        });
+    }
+
+    document.getElementById('vote-fad').addEventListener('click', function () { vote('fad'); });
+    document.getElementById('vote-shift').addEventListener('click', function () { vote('shift'); });
+  </script>
 
 </body>
 </html>
